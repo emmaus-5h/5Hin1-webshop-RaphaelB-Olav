@@ -1,5 +1,5 @@
 /* all pages */
-
+body  { background-color:blue;}
 footer {
   margin: 20px;
   font-size: 12px;
@@ -56,6 +56,7 @@ footer {
 .product-properties > li > .property-name {
   display: inline-block;
   width: 50px;
+
 }
 .product_amount {
   width: 80px
@@ -74,3 +75,4 @@ footer {
   float: left;
 }
 
+</body>
