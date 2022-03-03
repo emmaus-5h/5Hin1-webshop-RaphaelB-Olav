@@ -8,7 +8,7 @@ CREATE TABLE products (
   name VARCHAR(255),
   description TEXT,
   price NUMERIC(10, 2),
-  school_id INTEGER
+  school_id INTEGER,
   watersoort_id INTEGER
 );
 
