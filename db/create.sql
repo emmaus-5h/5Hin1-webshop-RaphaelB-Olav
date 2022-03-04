@@ -20,6 +20,16 @@ CREATE TABLE products (
   id INTEGER PRIMARY KEY AUTOINCREMENT,
   name VARCHAR(255)
 );
+  CREATE TABLE vissenvoer (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  product INTEGER,
+  watersoort INTEGER
+  );
+  CREATE TABLE vissengrootte (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  name VARCHAR(255)
+  );
+
 
   
 --
@@ -48,4 +58,17 @@ insert into school (name) values ('nee');
 
 insert into watersoort (name) values ('zoet');
 insert into watersoort (name) values ('zout');
+
+  insert into vissengrootte values ('groot');
+  insert into vissengrootte values ('klein');
   
+  insert into vissenvoer (product, vissengrootte) values (1,2)
+    insert into vissenvoer (product, vissengrootte) values (2,2)
+    insert into vissenvoer (product, vissengrootte) values (3,2)
+    insert into vissenvoer (product, vissengrootte) values (4,2)
+    insert into vissenvoer (product, vissengrootte) values (5,2)
+    insert into vissenvoer (product, vissengrootte) values (6,2)
+    insert into vissenvoer (product, vissengrootte) values (7,2)
+    insert into vissenvoer (product, vissengrootte) values (8,2)
+    insert into vissenvoer (product, vissengrootte) values (9,2)
+    insert into vissenvoer (product, vissengrootte) values (10,2)
