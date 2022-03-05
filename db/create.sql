@@ -9,9 +9,9 @@ CREATE TABLE products (
   description TEXT,
   price NUMERIC(10, 2),
   school_id INTEGER,
+  zwemgebied_id INTEGER,
   watersoort_id INTEGER,
-  vissengrootte_id INTEGER,
-  zwemgebied_id INTEGER
+  vissengrootte_id INTEGER
 );
 
   CREATE TABLE school (
