@@ -24,7 +24,7 @@ CREATE TABLE products (
   CREATE TABLE vissenvoer (
   id INTEGER PRIMARY KEY AUTOINCREMENT,
   product INTEGER,
-  watersoort INTEGER
+  vissengrootte INTEGER
   );
   CREATE TABLE vissengrootte (
   id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -73,3 +73,4 @@ insert into vissenvoer (product, vissengrootte) values (7,2)
 insert into vissenvoer (product, vissengrootte) values (8,2)
 insert into vissenvoer (product, vissengrootte) values (9,2)
 insert into vissenvoer (product, vissengrootte) values (10,2)
+insert into vissenvoer (product, vissengrootte) values (11,1)
