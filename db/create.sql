@@ -63,14 +63,14 @@ insert into watersoort (name) values ('zout');
 insert into vissengrootte (name) values ('groot');
 insert into vissengrootte (name) values ('klein');
   
-insert into vissenvoer (product, vissengrootte) values (1,2)
-insert into vissenvoer (product, vissengrootte) values (2,2)
-insert into vissenvoer (product, vissengrootte) values (3,2)
-insert into vissenvoer (product, vissengrootte) values (4,2)
-insert into vissenvoer (product, vissengrootte) values (5,2)
-insert into vissenvoer (product, vissengrootte) values (6,2)
-insert into vissenvoer (product, vissengrootte) values (7,2)
-insert into vissenvoer (product, vissengrootte) values (8,2)
-insert into vissenvoer (product, vissengrootte) values (9,2)
-insert into vissenvoer (product, vissengrootte) values (10,2)
-insert into vissenvoer (product, vissengrootte) values (11,1)
+insert into vissenvoer (product, vissengrootte) values (1,2);
+insert into vissenvoer (product, vissengrootte) values (2,2);
+insert into vissenvoer (product, vissengrootte) values (3,2);
+insert into vissenvoer (product, vissengrootte) values (4,2);
+insert into vissenvoer (product, vissengrootte) values (5,2);
+insert into vissenvoer (product, vissengrootte) values (6,2);
+insert into vissenvoer (product, vissengrootte) values (7,2);
+insert into vissenvoer (product, vissengrootte) values (8,2);
+insert into vissenvoer (product, vissengrootte) values (9,2);
+insert into vissenvoer (product, vissengrootte) values (10,2);
+insert into vissenvoer (product, vissengrootte) values (11,1);
