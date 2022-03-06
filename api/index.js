@@ -67,7 +67,7 @@ function getCategories(request, response) {
 function getProducts(request, response) {
   console.log('API ontvangt /api/products/', request.query)
   let data = []
-  const sqlOpdracht = db.prepare('SELECT products.id AS id, products.name AS name, products.description AS description, products.code AS code, products.price AS price, products.school_id AS school, products.zwemgebied_id AS zwemgebied, products.vissengrootte_id AS vissengrootte FROM products JOIN vissenvoer ON products.vissengrootte_id = products.vissengrootte_id ORDER BY id DESC')
+  const sqlOpdracht = db.prepare('SELECT products.id AS id, products.name AS name, products.description AS description, products.code AS code, products.price AS price, products.school_id AS school, products.zwemgebied_id AS zwemgebied, product.watersoort_id AS watersoort, products.vissengrootte_id AS vissengrootte FROM products JOIN vissenvoer ON products.vissengrootte_id = products.vissengrootte_id ORDER BY id DESC')
   data = sqlOpdracht.all()
   // console.log(JSON.stringify(data, null, 2))
   response.status(200).send(data)
@@ -78,7 +78,7 @@ function getProductById(request, response) {
   console.log('API ontvangt /api/products/:id', request.query)
   let data = []
   const product_id = parseInt(request.params.id)
-  const sqlOpdracht = db.prepare('SELECT products.id AS id, products.name AS name, products.description AS description, products.code AS code, products.price AS price, products.school_id AS school, products.zwemgebied_id AS zwemgebied, products.vissengrootte_id AS vissengrootte, vissenvoer AS vissenvoer FROM products WHERE id = ?')
+  const sqlOpdracht = db.prepare('SELECT products.id AS id, products.name AS name, products.description AS description, products.code AS code, products.price AS price, product.watersoort_id AS watersoort,  products.school_id AS school, products.zwemgebied_id AS zwemgebied, products.vissengrootte_id AS vissengrootte, vissenvoer AS vissenvoer FROM products WHERE id = ?')
   data = sqlOpdracht.all(product_id)
   response.status(200).json(data[0])
 }
