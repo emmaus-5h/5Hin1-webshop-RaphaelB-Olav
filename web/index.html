@@ -58,11 +58,11 @@
 				<div class="card-body">
 					<p class="product_description card-text"></p>
 					<ul class="product-properties">
-            <li><span class="propert-name">school:</span><span class="product_school_id"></span></li>
-            <li><span class="propert-name">zwemgebied:</span><span class="product_zwemgebied_id"></span></li>
-            <li><span class="propert-name">vissenvoer:</span><span class="product_price"></span></li>
-            <li><span class="propert-name">Vis Grootte:</span><span class="product_price"></span></li>
-            <li><span class="propert-name">Watersoort:</span><span class="product_price"></span></li>
+            <li><span class="propert-name">school:</span><span class="product.school_id"></span></li>
+            <li><span class="propert-name">zwemgebied:</span><span class="product.zwemgebied_id"></span></li>
+            <li><span class="propert-name">vissenvoer:</span><span class="vissenvoer"></span></li>
+            <li><span class="propert-name">Vis Grootte:</span><span class="product.vissengrootte_id"></span></li>
+            <li><span class="propert-name">Watersoort:</span><span class="product.watersoort_id"></span></li>
 						<li><span class="propert-name">Prijs:</span><span class="product_price"></span></li>
 						<li><span class="propert-name">Code:</span><span class="product_code"></span></li>
             
@@ -128,11 +128,11 @@
               const clone = template.content.cloneNode(true);
               clone.querySelector(".product_title").textContent = name
               clone.querySelector(".product_description").textContent =`${product.description.substr(0, 100)}...`
-              clone.querySelector(".product_school_id").textContent =`${product.school_id}`
-              clone.querySelector(".product_zwemgebied_id").textContent =`${product.zwemgebied_id}`
-              clone.querySelector(".product_vissenvoer_id").textContent =`${product.vissenvoer_id}`
-              clone.querySelector(".product_vissengrootte_id").textContent =`${product.vissengrootte_id}`
-              clone.querySelector(".product_watersoort_id").textContent =`${product.watersoort_id}`
+              clone.querySelector(".product.school_id").textContent =`${product.school_id}`
+              clone.querySelector(".product.zwemgebied_id").textContent =`${product.zwemgebied_id}`
+              clone.querySelector(".product.vissenvoer_id").textContent =`${product.vissenvoer}`
+              clone.querySelector(".product.vissengrootte_id").textContent =`${product.vissengrootte_id}`
+              clone.querySelector(".product.watersoort_id").textContent =`${product.watersoort_id}`
               clone.querySelector(".product_price").textContent = `€ ${product.price.toFixed(2)}`
               clone.querySelector(".product_code").textContent = product.code
               clone.querySelector(".product_id").value = product.id
