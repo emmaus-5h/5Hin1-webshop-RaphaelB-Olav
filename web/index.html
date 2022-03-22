@@ -62,7 +62,7 @@
             <li><span class="propert-name">zwemgebied:</span><span class="product.zwemgebied"></span></li>
             <li><span class="propert-name">Watersoort:</span><span class="product.watersoort"></span></li>
             <li><span class="propert-name">vissenvoer:</span><span class="product.vissenvoer"></span></li>
-            <li><span class="propert-name">VissenGrootte:</span><span class="product.vissengrootte"></span></li>
+            <li><span class="propert-name">VissenGrootte:</span><span class="product_vissengrootte"></span></li> <!-- OPMERKING DOCENT: . verboden in naam van class -->
 						<li><span class="propert-name">Prijs:</span><span class="product.price"></span></li>
 						<li><span class="propert-name">Code:</span><span class="product.code"></span></li>
             
@@ -129,10 +129,10 @@
               clone.querySelector(".product_title").textContent = name
               clone.querySelector(".product_description").textContent =`${product.description.substr(0, 100)}...`
 //              clone.querySelector(".product_school").textContent =`${product.school}`
-//              clone.querySelector(".product_zwemgebied").textContent =`${products.zwemgebied}`
-//              clone.querySelector(".product_watersoort").textContent =`${products.watersoort}`
-//              clone.querySelector(".product_vissenvoer").textContent =`${products.vissenvoer}`
-//              clone.querySelector(".product_vissengrootte").textContent =`${products.vissengrootte}`
+//              clone.querySelector(".product_zwemgebied").textContent =`${product.zwemgebied}`
+//              clone.querySelector(".product_watersoort").textContent =`${product.watersoort}`
+//              clone.querySelector(".product_vissenvoer").textContent =`${product.vissenvoer}`
+                clone.querySelector(".product_vissengrootte").textContent =`${product.vissengrootte}`
 //              clone.querySelector(".product_price").textContent = `€ ${product.price.toFixed(2)}`
 //              clone.querySelector(".product_code").textContent = product.code
               clone.querySelector(".product_id").value = product.id

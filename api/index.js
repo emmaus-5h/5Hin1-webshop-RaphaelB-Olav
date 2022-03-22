@@ -67,7 +67,15 @@ function getCategories(request, response) {
 function getProducts(request, response) {
   console.log('API ontvangt /api/products/', request.query)
   let data = []
-  const sqlOpdracht = db.prepare('SELECT products.id AS id, products.name AS name, products.description AS description, products.code AS code, products.price AS price, products.school_id AS school, products.zwemgebied_id AS zwemgebied, products.watersoort_id AS watersoort, products.vissengrootte_id AS vissengrootte FROM products JOIN vissenvoer ON products.vissengrootte_id = products.vissengrootte_id ORDER BY id DESC')
+  // POGING VAN LEERLINGEN:
+  // const sqlOpdracht = db.prepare('SELECT products.id AS id, products.name AS name, products.description AS description, products.code AS code, products.price AS price, products.school_id AS school, products.zwemgebied_id AS zwemgebied, products.watersoort_id AS watersoort, products.vissengrootte_id AS vissengrootte FROM products JOIN vissenvoer ON products.vissengrootte_id = products.vissengrootte_id ORDER BY id DESC')
+  // CORRECTIE voor 1:n relatie met vissengrootte DOOR DOCENT
+  const sqlOpdracht = db.prepare('SELECT products.id AS id, products.name AS name, products.description AS description, products.code AS code, products.price AS price, products.school_id AS school, products.zwemgebied_id AS zwemgebied, products.watersoort_id AS watersoort, vissengrootte.name AS vissengrootte FROM products JOIN vissengrootte ON products.vissengrootte_id = vissengrootte.id ORDER BY id DESC')
+  // TIP VOOR CORRECTIE voor andere 1:n relaties DOOR DOCENT
+  // voeg meerdere joins toe en verwijder je commentaarmarkeringen voor de code die je al hebt gemaakt in het webdeel
+  // TIP VOOR CORRECTIE voor n:m relaties DOOR DOCENT
+  // aparte API call toevoegen voor vissenvoer, gegeven een product.id
+  // dit is behoorlijk lastig om goed te doen, in een emc-uur zouden we dat samen kunnen doen
   data = sqlOpdracht.all()
   // console.log(JSON.stringify(data, null, 2))
   response.status(200).send(data)
